@@ -7,21 +7,36 @@
 
   <!-- VERY IMPORTANT -->
   <link rel="stylesheet" href="./css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
   <script defer src="./js/script.js"></script>
 </head>
 <body>
-<button id="themeToggle" class="theme-toggle">🌙</button>
+<nav class="navbar">
+  <div class="logo">Mahesh.</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button id="themeToggle" class="theme-toggle">🌙</button>
+  <button class="menu-toggle" id="mobile-menu" aria-label="Toggle navigation">☰</button>
+</nav>
 
 <!-- HERO -->
-<section class="hero fade-in">
+<section id="home" class="hero fade-in">
+  <div id="particles"></div>
   <h1>Designer & Developer</h1>
   <p>I build clean, responsive, and user-friendly web applications.</p>
   <p class="name">— Mahesh Dattu Ganji</p>
+  <a href="mailto:777dattu@gmail.com" class="hire-btn"><i class="fas fa-envelope"></i> Hire Me</a>
 </section>
 
 <!-- ABOUT -->
-<section class="about fade-in">
-  <h2>Hi, I’m Mahesh. Nice to meet you.</h2>
+<section id="about" class="about fade-in">
+  <img src="assets/avatar.png" alt="Mahesh Dattu" class="about-img">
+  <h2>Hi, I’m Mahesh. Nice to meet you. 👋</h2>
   <p>
     I’m a Computer Science graduate from Mohan Babu University, Tirupati,
     graduating in 2026. I enjoy building web applications using HTML, CSS,
@@ -30,30 +45,60 @@
 </section>
 
 <!-- SKILLS -->
-<section class="skills fade-in">
+<section id="skills" class="skills fade-in">
   <div class="skill-card">
     <h3>Frontend</h3>
-    <p>HTML, CSS, JavaScript</p>
+    <div class="skill-item">
+      <p>HTML5 <span class="percent">95%</span></p>
+      <div class="progress-bar"><div class="progress" style="--width: 95%"></div></div>
+    </div>
+    <div class="skill-item">
+      <p>CSS3 <span class="percent">90%</span></p>
+      <div class="progress-bar"><div class="progress" style="--width: 90%"></div></div>
+    </div>
+    <div class="skill-item">
+      <p>JavaScript <span class="percent">85%</span></p>
+      <div class="progress-bar"><div class="progress" style="--width: 85%"></div></div>
+    </div>
   </div>
 
   <div class="skill-card">
     <h3>Backend & Data</h3>
-    <p>Java, SQL</p>
+    <div class="skill-item">
+      <p>Java <span class="percent">80%</span></p>
+      <div class="progress-bar"><div class="progress" style="--width: 80%"></div></div>
+    </div>
+    <div class="skill-item">
+      <p>SQL <span class="percent">75%</span></p>
+      <div class="progress-bar"><div class="progress" style="--width: 75%"></div></div>
+    </div>
   </div>
 
   <div class="skill-card">
     <h3>Tools</h3>
-    <p>Git, GitHub, Prompt Engineering</p>
+    <ul class="tools-list">
+      <li><i class="fab fa-git-alt"></i> Git & GitHub</li>
+      <li><i class="fas fa-code"></i> VS Code</li>
+      <li><i class="fas fa-robot"></i> Prompt Engineering</li>
+      <li><i class="fas fa-cloud"></i> Vercel</li>
+    </ul>
   </div>
 </section>
 
 <!-- PROJECTS -->
-<section class="projects fade-in">
+<section id="projects" class="projects fade-in">
   <h2>My Recent Work</h2>
+
+  <div class="filter-buttons">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="web-app">Web Apps</button>
+    <button class="filter-btn" data-filter="tools">Tools</button>
+  </div>
 
   <div class="project-grid">
 
-    <div class="project">
+    <div class="project" data-category="web-app">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop" alt="Image Editor" class="project-img">
       <h3>Image Editor Web App</h3>
       <p>
         Image editor with crop, zoom, blur, sepia filters, and dark mode.
@@ -63,7 +108,8 @@
       </a>
     </div>
 
-    <div class="project">
+    <div class="project" data-category="tools">
+      <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=600&h=400&fit=crop" alt="Password Generator" class="project-img">
       <h3>Password Generator</h3>
       <p>
         Secure password generator with copy-to-clipboard functionality.
@@ -77,7 +123,7 @@
 </section>
 
 <!-- CONTACT -->
-<section class="contact fade-in">
+<section id="contact" class="contact fade-in">
   <h2>Interested in working together?</h2>
 
   <p>
@@ -85,15 +131,17 @@
   </p>
 
   <div class="socials">
-    <a href="https://www.linkedin.com/in/maheshdattu" target="_blank">💼 LinkedIn</a>
-    <a href="https://github.com/777dattu-sys" target="_blank">🐙 GitHub</a>
-    <a href="assets/resume.pdf" download class="resume-btn">Download Resume</a>
+    <a href="https://www.linkedin.com/in/maheshdattu" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    <a href="https://github.com/777dattu-sys" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+    <a href="assets/resume.pdf" download class="resume-btn"><i class="fas fa-file-download"></i> Download Resume</a>
   </div>
 </section>
 
 <footer>
   © 2026 Mahesh Dattu
 </footer>
+
+<button id="backToTop" class="back-to-top" aria-label="Back to Top">↑</button>
 
 </body>
 </html>
